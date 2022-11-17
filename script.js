@@ -1,12 +1,56 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
+
 $(document).ready(function () {
 
-  
   $('#currentDay').text(dayjs().format('dddd, MMMM D, YYYY'));
 
+  $('.saveBtn').on('click', function (){
 
+    var userText = $(this).siblings('.description').val();
+    var timeBlock = $(this).parent().attr('id');
+
+    localStorage.setItem(timeBlock, userText);
+
+
+    setTimeout(function () {
+      $('.notice').addClass('show');
+    },5000);
+  });
+
+  function newHour() {
+
+    var existingHour = dayjs().hour();
+
+    $('.time-block').each(function (){
+      var timeId = parseInt($(this).attr('id').split('-')[2]);
+
+      if(timeId < existingHour) {
+        $(this).addClass('past');
+      }
+      else if(timeId === existingHour){
+        $(this).removeClass('past');
+        $(this).addClass('present');
+      } else {
+        $(this).removeClass('past');
+        $(this).removeClass('present');
+        $(this).addClass('future');
+      }
+    });
+  }
+
+  newHour();
+
+  setInterval(newHour, 15000);
+
+
+  $('#first-hour-9 .description').val(localStorage.getItem('first-hour-9'));
+  $('#second-hour-10 .description').val(localStorage.getItem('second-hour-10'));
+  $('#third-hour-11 .description').val(localStorage.getItem('third-hour-11'));
+  $('#lunch-hour-12 .description').val(localStorage.getItem('lunch-hour-12'));
+  $('#fifth-hour-13 .description').val(localStorage.getItem('fifth-hour-13'));
+  $('#sixth-hour-14 .description').val(localStorage.getItem('sixth-hour-14'));
+  $('#seventh-hour-15 .description').val(localStorage.getItem('seventh-hour-15'));
+  $('#eighth-hour-16 .description').val(localStorage.getItem('eighth-hour-16 '));
+  $('#last-hour-17 .description').val(localStorage.getItem('last-hour-17'));
 
 
  
