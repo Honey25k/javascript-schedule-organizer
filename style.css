@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  background-color: #ec6fe6;
 }
 
 textarea {
@@ -21,11 +22,11 @@ textarea {
 }
 
 .row {
-  border-top: 1px solid white;
+  border-top: 1px solid rgb(223, 36, 230);
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: #8438e7;
   color: #000000;
   border-top: 1px dashed #000000;
 }
@@ -49,7 +50,7 @@ textarea {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  background-color: #8438e7;
   color: white;
 }
 
