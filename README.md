@@ -9,7 +9,8 @@ A schedule organizer project that makes your work day planning easier. The app h
 * Shows you the current time in military clock.
 * Input fields within the block of the hour.
 
-### Screenshot
+### Screenshot:
+![portfolio screenshot](/screenshot1.jpg) 
 
 
 ### Link to deployed application: 
