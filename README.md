@@ -14,4 +14,5 @@ A schedule organizer project that makes your work day planning easier. The app h
 
 
 ### Link to deployed application: 
+https://honey25k.github.io/javascript-schedule-organizer/
 
